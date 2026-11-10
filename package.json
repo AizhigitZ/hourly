@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"vite --host 0.0.0.0\" \"node server/index.cjs\"",
+    "start": "node server/index.cjs",
     "client": "vite",
     "server": "node server/index.cjs",
     "build": "vite build",

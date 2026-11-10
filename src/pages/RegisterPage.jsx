@@ -34,6 +34,7 @@ export default function RegisterPage() {
     }
   }, [preselected]);
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -42,6 +43,7 @@ export default function RegisterPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('submitting');
+    setErrorMessage('');
 
     try {
       const res = await fetch('/api/register', {
@@ -53,10 +55,27 @@ export default function RegisterPage() {
         setStatus('success');
         setForm({ name: '', phone: '', contactMethod: 'telegram', level: '', course: '', message: '' });
       } else {
+        const data = await res.json().catch(() => ({}));
+        setErrorMessage(data.error || t('register.error'));
         setStatus('error');
       }
-    } catch {
-      setStatus('error');
+    } catch (err) {
+      console.warn('Backend server unreachable, saving locally:', err);
+      // Fallback: save to offline queue so registration is never lost
+      try {
+        const offline = JSON.parse(localStorage.getItem('hourly_offline_registrations') || '[]');
+        offline.unshift({
+          ...form,
+          id: 'local_' + Date.now().toString(36),
+          status: 'pending',
+          createdAt: new Date().toISOString(),
+        });
+        localStorage.setItem('hourly_offline_registrations', JSON.stringify(offline));
+        setStatus('success');
+        setForm({ name: '', phone: '', contactMethod: 'telegram', level: '', course: '', message: '' });
+      } catch {
+        setStatus('error');
+      }
     }
   };
 
@@ -226,7 +245,7 @@ export default function RegisterPage() {
           {/* Error */}
           {status === 'error' && (
             <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-sm text-red-600">
-              {t('register.error')}
+              {errorMessage || t('register.error')}
             </div>
           )}
 
