@@ -1,0 +1,46 @@
+[
+  {
+    "id": "reg_01",
+    "name": "Aida Mirlanova",
+    "phone": "+996 555 123 456",
+    "contactMethod": "telegram",
+    "level": "intermediate",
+    "course": "IT & Tech English",
+    "message": "Preparing for tech interviews with European software companies. Need focus on system architecture discussions in English.",
+    "status": "enrolled",
+    "createdAt": "2026-11-08T09:15:00.000Z"
+  },
+  {
+    "id": "reg_02",
+    "name": "Nurlan Toktosunov",
+    "phone": "+996 700 987 654",
+    "contactMethod": "whatsapp",
+    "level": "upperIntermediate",
+    "course": "Business English",
+    "message": "Need to lead meetings with foreign partners and negotiate contracts. Focus on negotiation vocabulary and formal correspondence.",
+    "status": "contacted",
+    "createdAt": "2026-11-08T14:30:00.000Z"
+  },
+  {
+    "id": "reg_03",
+    "name": "Eliza Kasymova",
+    "phone": "+996 772 345 678",
+    "contactMethod": "phone",
+    "level": "intermediate",
+    "course": "IELTS Preparation",
+    "message": "Targeting 7.5 IELTS band for master's degree scholarship in Europe. Need speaking and writing practice.",
+    "status": "pending",
+    "createdAt": "2026-11-09T08:20:00.000Z"
+  },
+  {
+    "id": "reg_04",
+    "name": "Bakyt Asanov",
+    "phone": "+996 500 443 211",
+    "contactMethod": "telegram",
+    "level": "elementary",
+    "course": "General Speaking",
+    "message": "Want to overcome language barrier and speak fluently when traveling abroad.",
+    "status": "pending",
+    "createdAt": "2026-11-09T11:45:00.000Z"
+  }
+]
