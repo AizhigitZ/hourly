@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'hourly2025';
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'hourly2005UCA';
 
 // Middlewares
 app.use(cors());

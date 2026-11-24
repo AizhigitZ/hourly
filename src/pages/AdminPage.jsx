@@ -43,7 +43,7 @@ function AdminLogin({ onLogin }) {
     } catch (err) {
       console.warn('Backend server unreachable during login:', err);
       // Resilient fallback: if server is unreachable and password matches default, log admin in
-      if (password === 'hourly2025') {
+      if (password === 'hourly2005UCA') {
         const fallbackToken = btoa(`admin:${Date.now()}`);
         onLogin(fallbackToken);
       } else {
@@ -115,18 +115,6 @@ function AdminLogin({ onLogin }) {
             {t('admin.login')}
           </button>
 
-          <div className="text-center mt-3 space-y-1">
-            <p className="text-xs text-gray-400">
-              Default password: <code className="bg-gray-100 px-1.5 py-0.5 rounded text-gray-600 font-mono">hourly2025</code>
-            </p>
-            <button
-              type="button"
-              onClick={() => setPassword('hourly2025')}
-              className="text-xs text-[#6D28D9] hover:text-[#4C1D95] font-semibold underline underline-offset-2 transition-colors"
-            >
-              Click to autofill password
-            </button>
-          </div>
         </form>
       </div>
     </div>
