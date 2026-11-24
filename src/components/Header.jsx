@@ -23,7 +23,6 @@ export default function Header() {
 
   const navLinks = [
     { label: t('nav.courses'), to: '/courses' },
-    { label: t('nav.pricing'), to: '/pricing' },
     { label: t('nav.tutors'), to: '/tutors' },
     { label: t('nav.about'), to: '/about' },
   ];

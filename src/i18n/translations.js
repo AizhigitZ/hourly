@@ -401,6 +401,8 @@ export const translations = {
       "faqA3": "Yes! If you travel or get busy at work, you can freeze your subscription for up to 30 days without forfeiting your remaining lessons."
     },
     "tutorsPage": {
+      "title": "Meet Our Top Tutors",
+      "subtitle": "Experienced and certified teachers dedicated to your English success",
       "filterAll": "All Tutors",
       "filterTech": "IT & Tech",
       "filterBusiness": "Executive & Business",
@@ -819,6 +821,8 @@ export const translations = {
       "faqA3": "Да! Если вы уезжаете в отпуск или командировку, абонемент можно заморозить на срок до 30 дней без потери уроков."
     },
     "tutorsPage": {
+      "title": "Наши лучшие преподаватели",
+      "subtitle": "Опытные и сертифицированные учителя для вашего успеха в английском",
       "filterAll": "Все преподаватели",
       "filterTech": "IT и технологии",
       "filterBusiness": "Бизнес и переговоры",
@@ -1237,6 +1241,8 @@ export const translations = {
       "faqA3": "Ооба! Сапарга чыксаңыз же жумуш көбөйсө, сабактарды 30 күнгө чейин сактап тоңдуруп койсоңуз болот."
     },
     "tutorsPage": {
+      "title": "Биздин башкы мугалимдерибиз",
+      "subtitle": "Эркин жана ишенимдүү сүйлөөгө үйрөтүүчү тажрыйбалуу адистер",
       "filterAll": "Бардык мугалимдер",
       "filterTech": "IT жана технологиялар",
       "filterBusiness": "Бизнес жана сүйлөшүүлөр",

@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import CoursesPage from './pages/CoursesPage';
-import PricingPage from './pages/PricingPage';
 import TutorsPage from './pages/TutorsPage';
 import AboutPage from './pages/AboutPage';
 import RegisterPage from './pages/RegisterPage';
@@ -33,7 +32,6 @@ export default function App() {
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/courses" element={<CoursesPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
                   <Route path="/tutors" element={<TutorsPage />} />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/register" element={<RegisterPage />} />

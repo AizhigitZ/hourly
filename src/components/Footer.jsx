@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
-import { MapPin, Mail, Send, MessageCircle } from 'lucide-react';
+import { MapPin, Mail, Send, MessageCircle, Instagram } from 'lucide-react';
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -16,7 +16,6 @@ export default function Footer() {
   const platform = [
     { label: t('footer.platform.why'), to: '/about' },
     { label: t('footer.platform.tutor'), to: '/tutors' },
-    { label: t('footer.platform.pricing'), to: '/pricing' },
     { label: t('footer.platform.schedule'), to: '/about' },
     { label: t('footer.platform.reviews'), to: '/' },
   ];
@@ -50,15 +49,18 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={14} className="text-[#6D28D9] flex-shrink-0" />
-                <span>hello@hourly.kg</span>
+                <span>hourly.education@gmail.com</span>
               </div>
             </div>
-            <div className="flex gap-2.5 pt-1">
+            <div className="flex flex-wrap gap-2.5 pt-1">
               <a href="https://t.me" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-200 text-xs font-medium text-gray-700 hover:border-purple-300 hover:text-[#4C1D95] transition-colors bg-white shadow-2xs">
                 <Send size={12} className="text-[#6D28D9]" /> Telegram
               </a>
               <a href="https://whatsapp.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-200 text-xs font-medium text-gray-700 hover:border-emerald-300 hover:text-emerald-700 transition-colors bg-white shadow-2xs">
                 <MessageCircle size={13} className="text-emerald-500" /> WhatsApp
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-200 text-xs font-medium text-gray-700 hover:border-pink-300 hover:text-pink-700 transition-colors bg-white shadow-2xs">
+                <Instagram size={13} className="text-pink-500" /> Instagram
               </a>
             </div>
           </div>
